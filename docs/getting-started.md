@@ -54,6 +54,8 @@ npx skills remove adaptive-learning -g
 
 **学习档案不会随 Skill 卸载而删除。** 前提是按本项目约定，将学习库放在 Skill 安装目录之外。
 
+若安装器报告成功，但新会话仍能发现 Skill，请检查公共 `.agents/skills/adaptive-learning` 入口。本次项目范围测试出现了公共目录残留。确认该目录确为本 Skill 安装内容后，可请 Agent 仅移除这个入口并再次检查；若它是符号链接，只移除链接，不删除链接指向的源码。不要删除 `.agents/skills` 整个父目录，也不要动学习库。
+
 | 内容 | 卸载后 |
 | --- | --- |
 | 所选宿主中的 Skill 安装入口与规则资源 | 由安装器移除 |

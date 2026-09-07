@@ -5,7 +5,7 @@
 - 已完成：原始 Skill 结构校验、资源相对引用检查、本机全局安装入口检查。
 - 已完成：使用 Skills CLI 在独立临时项目中从本地发布包安装，成功发现一个 Skill；安装后与发布包逐文件比较一致。
 - 已完成：从公开 GitHub 仓库通过 `npx -y skills add time-dealer/adaptive-learning -a codex -y` 安装到独立临时项目；全部 9 个 Skill 资源文件与发布包一致（不计本机 Finder 生成且未发布的 .DS_Store）。
-- 已完成：在同一临时项目执行 `npx -y skills remove adaptive-learning -a codex -y`，Skill 已移除，独立学习目录中的测试记录仍然存在。
+- 已完成：在临时项目运行卸载命令，安装器报告成功，独立学习目录中的测试记录保留。但当前环境下公共 `.agents/skills/adaptive-learning` 目录仍在，因此不能把成功提示视为所有入口均已清理；需按教程核对残留入口。
 - 已完成：GitHub 首页文本、表格及 Mermaid 流程图渲染检查。
 - 尚未单独实测：Skills CLI 的全局 `-g --all` 安装路径；以上公开安装与卸载验证使用项目范围，未改动使用者现有全局 Skill。
 - 尚未验证：完整多轮教学、新会话恢复、不同宿主的图示／交互行为、长期学习效果。
