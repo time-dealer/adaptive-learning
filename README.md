@@ -61,6 +61,24 @@ npx -y skills add time-dealer/adaptive-learning -g -a codex -y
 
 其他宿主的显式调用方式可能不同，也可以说“使用 adaptive-learning”。安装器来自 [vercel-labs/skills](https://github.com/vercel-labs/skills)。
 
+### 卸载
+
+移除全局安装的 Skill：
+
+```bash
+npx skills remove adaptive-learning -g
+```
+
+仅从 Codex 移除：
+
+```bash
+npx skills remove adaptive-learning -g -a codex
+```
+
+按提示确认移除范围。如果当初安装到项目内而没有使用 `-g`，在那个项目目录运行命令并去掉 `-g`。
+
+**卸载只移除 Skill，不删除学习档案。** 独立学习库中的目标、进度、练习、作品、资料来源和本地路径配置都会保留。重新安装后，只要仍可访问原学习库，就可以继续读取记录。若要彻底清除记录，请自行核对学习库路径，另行备份或删除；不要为了卸载 Skill 删除整个文档目录。详见 [更新与卸载](docs/getting-started.md#5-更新和卸载)。
+
 ## 你可以这样说
 
 ```text
