@@ -113,4 +113,4 @@ SQL 看结果是否满足需求；文章看受众、结构、表达和具体修�
 
 本仓库原创内容采用 [MIT License](LICENSE)。引用资料的权利归原作者所有，链接不改变其许可。
 
-制作流程参考 dbskill 的 [dbs-skill-maker](https://github.com/dontbesilent2025/dbskill)，安装使用开源 Skills CLI。项目介绍方式参考 [Cyber Xiaowan](https://github.com/cyberxiaowan/cyber-xiaowan) 与 [Cheat on Content](https://github.com/XBuilderLAB/cheat-on-content)；本项目独立编写，不代表这些项目背书。
+
