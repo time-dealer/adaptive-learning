@@ -1,10 +1,10 @@
 <div align="center">
 
-# Adaptive Learning · 自适应学习
+# Rogue Learning Skill · 自适应学习
 
 ### 有目标，就一步步学。好奇了，就从一个问题开始。
 
-为 AI Agent 准备的学习 Skill：查证资料、简短解释、练习反馈，接着上次继续。
+为 AI Agent 准备的 Rogue Learning Skill：查证资料、简短解释、练习反馈，接着上次继续。
 
 [开始使用](#安装) · [使用教程](docs/getting-started.md) · [对话示例](examples/conversations.md) · [方法依据](skills/adaptive-learning/references/methods.md)
 
@@ -16,7 +16,7 @@
 
 也可以只有一个问题：**“什么是 loop？”**
 
-Adaptive Learning 会根据这两种情况调整教学方式。需要路线时，先了解目标与基础；只是好奇时，直接解释，等你继续追问。
+Rogue Learning Skill 会根据这两种情况调整教学方式。需要路线时，先了解目标与基础；只是好奇时，直接解释，等你继续追问。
 
 ## 两种方式，随时切换
 
@@ -34,13 +34,13 @@ Adaptive Learning 会根据这两种情况调整教学方式。需要路线时�
 需要 Node.js 与 npm，以及支持 Agent Skills、网络搜索和本地文件读写的 Agent。Skill 本身是 Markdown 规则，不包含模型或搜索服务。
 
 ```bash
-npx -y skills add time-dealer/adaptive-learning -g --all
+npx -y skills add RecodeSun/adaptive-learning -g --all
 ```
 
 只安装到 Codex：
 
 ```bash
-npx -y skills add time-dealer/adaptive-learning -g -a codex -y
+npx -y skills add RecodeSun/adaptive-learning -g -a codex -y
 ```
 
 安装后打开新的 Agent 会话，输入：
@@ -68,13 +68,13 @@ npx -y skills add time-dealer/adaptive-learning -g -a codex -y
 Agent 应重新运行安装命令覆盖规则资源，并保留独立学习库。手动执行时使用与安装相同的命令即可：
 
 ```bash
-npx -y skills add time-dealer/adaptive-learning -g --all
+npx -y skills add RecodeSun/adaptive-learning -g --all
 ```
 
 只更新 Codex：
 
 ```bash
-npx -y skills add time-dealer/adaptive-learning -g -a codex -y
+npx -y skills add RecodeSun/adaptive-learning -g -a codex -y
 ```
 
 ### 卸载

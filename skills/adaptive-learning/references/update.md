@@ -14,13 +14,13 @@
 全局更新所有支持宿主：
 
 ```bash
-npx -y skills add time-dealer/adaptive-learning -g --all
+npx -y skills add RecodeSun/adaptive-learning -g --all
 ```
 
 只更新 Codex：
 
 ```bash
-npx -y skills add time-dealer/adaptive-learning -g -a codex -y
+npx -y skills add RecodeSun/adaptive-learning -g -a codex -y
 ```
 
 项目内安装过的用户，应在原项目目录去掉 `-g` 后运行对应命令。
