@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧭 Rogue Learning Skill
+# 🧭 Roguelearning
 
 ### 把一次提问，变成真正学会的过程
 
@@ -20,11 +20,11 @@
 
 普通 AI 对话很容易停在“解释过了”：回答很完整，用户也看懂了，但换一个情境仍然不会做；下一次打开对话，又要重新交代目标、基础和学到哪里。
 
-Rogue Learning Skill 把学习从一次性回答改成一个连续循环：先判断你现在需要快速理解还是系统学习，再用实际回答和作品判断掌握程度，最后只保存有续学价值的记录。
+Roguelearning 把学习从一次性回答改成一个连续循环：先判断你现在需要快速理解还是系统学习，再用实际回答和作品判断掌握程度，最后只保存有续学价值的记录。
 
 它适合两类时刻：
 
-| 你现在的状态 | Rogue Learning Skill 怎么做 |
+| 你现在的状态 | Roguelearning 怎么做 |
 | --- | --- |
 | 有明确目标，例如“独立写出 SQL 查询” | 了解目标和基础，拆分近期路径，用练习与作品持续校准 |
 | 只是好奇，例如“什么是 token？” | 直接给短解释和例子，沿你的追问继续展开，不强制启动课程 |
@@ -44,7 +44,7 @@ Rogue Learning Skill 把学习从一次性回答改成一个连续循环：先�
 
 ## 🗺️ 它如何工作
 
-![Rogue Learning Skill 的系统学习与问答探索流程](docs/learning-flow.svg)
+![Roguelearning 的系统学习与问答探索流程](docs/learning-flow.svg)
 
 ## 📦 安装
 
@@ -104,7 +104,7 @@ npx -y skills add KairoRogue/rogue-learning -g -a codex -y
 使用 $rogue-learning，继续上次学习。
 ```
 
-其他 Agent 的显式调用语法可能不同。无法使用 `$rogue-learning` 时，也可以直接说“使用 Rogue Learning Skill”。更多完整对话见 [使用教程](docs/getting-started.md) 和 [对话示例](examples/conversations.md)。
+其他 Agent 的显式调用语法可能不同。无法使用 `$rogue-learning` 时，也可以直接说“使用 Roguelearning”。更多完整对话见 [使用教程](docs/getting-started.md) 和 [对话示例](examples/conversations.md)。
 
 ## 🧠 学习方法
 
@@ -188,7 +188,7 @@ rogue-learning/
 
 ## 🧪 当前状态
 
-Rogue Learning Skill 目前是公开试用版本。仓库结构、本机入口以及 `npx skills add` 安装流程已经验证；完整多轮教学、跨会话恢复和长期学习效果仍需更多真实使用反馈。示例用于展示交互方式，不构成学习效果证明。
+Roguelearning 目前是公开试用版本。仓库结构、本机入口以及 `npx skills add` 安装流程已经验证；完整多轮教学、跨会话恢复和长期学习效果仍需更多真实使用反馈。示例用于展示交互方式，不构成学习效果证明。
 
 - [查看安装与结构验证](docs/validation.md)
 - [查看维护者验证环境](docs/maintainer-validation.md)

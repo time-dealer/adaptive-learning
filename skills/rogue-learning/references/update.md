@@ -1,6 +1,6 @@
-# 更新 Rogue Learning Skill
+# 更新 Roguelearning
 
-当用户要求“更新 rogue skill”、“更新 rogue-learning skill”、“更新 Rogue Learning Skill”或类似说法时，按更新处理，不要求用户先删除当前 Skill。
+当用户要求“更新 rogue skill”、“更新 rogue-learning skill”、“更新 Roguelearning”或类似说法时，按更新处理，不要求用户先删除当前 Skill。
 
 ## 原则
 
