@@ -7,6 +7,7 @@
 - 已完成：从公开 GitHub 仓库安装到独立临时项目；Skill 资源文件与发布包一致（不计本机 Finder 生成且未发布的 .DS_Store）。仓库后续改为 `KairoRogue/rogue-learning`，Skill id 改为 `rogue-learning`。
 - 已完成：临时项目限定 `-a codex` 卸载后公共入口仍在；随后执行完整卸载命令，公共入口已删除，独立学习目录的测试记录仍在。单宿主卸载与完整卸载的范围不同。
 - 已完成：GitHub 首页文本、表格及 Mermaid 流程图渲染检查。
+- 已完成：仓库改名后，在独立临时项目中通过 `npx -y skills add KairoRogue/rogue-learning -a codex -y` 安装成功；安装器识别到 1 个 Skill，名称为 `rogue-learning`。
 - 尚未单独实测：Skills CLI 的全局 `-g --all` 安装路径；以上公开安装与卸载验证使用项目范围，未改动使用者现有全局 Skill。
 - 尚未验证：完整多轮教学、新会话恢复、不同宿主的图示／交互行为、长期学习效果。
 
