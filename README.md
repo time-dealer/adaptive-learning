@@ -1,71 +1,161 @@
 <div align="center">
 
-# Rogue Learning Skill · 自适应学习
+# 🧭 Rogue Learning Skill
 
-### 有目标，就一步步学。好奇了，就从一个问题开始。
+### 把一次提问，变成真正学会的过程
 
-为 AI Agent 准备的 Rogue Learning Skill：查证资料、简短解释、练习反馈，接着上次继续。
+面向 Codex 及其他 Agent 的自适应学习 Skill。它会查证资料、解释概念、设计练习、根据表现调整难度，并把进度留给下一次对话。
 
-[开始使用](#安装) · [使用教程](docs/getting-started.md) · [对话示例](examples/conversations.md) · [方法依据](skills/rogue-learning/references/methods.md)
+[![Skill](https://img.shields.io/badge/Agent%20Skill-rogue--learning-6f42c1?style=flat-square)](skills/rogue-learning/SKILL.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/status-public%20preview-f59e0b?style=flat-square)](docs/validation.md)
+
+[快速安装](#-安装) · [开始学习](#-怎么使用) · [更新](#-更新) · [卸载](#-卸载) · [完整教程](docs/getting-started.md)
 
 </div>
 
 ---
 
-你可以带着明确目标来：**“我要能自己写 SQL 查询。”**
+## 💡 为什么做这个 Skill
 
-也可以只有一个问题：**“什么是 loop？”**
+普通 AI 对话很容易停在“解释过了”：回答很完整，用户也看懂了，但换一个情境仍然不会做；下一次打开对话，又要重新交代目标、基础和学到哪里。
 
-Rogue Learning Skill 会根据这两种情况调整教学方式。需要路线时，先了解目标与基础；只是好奇时，直接解释，等你继续追问。
+Rogue Learning Skill 把学习从一次性回答改成一个连续循环：先判断你现在需要快速理解还是系统学习，再用实际回答和作品判断掌握程度，最后只保存有续学价值的记录。
 
-## 两种方式，随时切换
+它适合两类时刻：
 
-| 系统学习 | 问答探索 |
+| 你现在的状态 | Rogue Learning Skill 怎么做 |
 | --- | --- |
-| 从目标、基础和可用时间开始 | 从你眼前的问题开始 |
-| 搜索资料，安排近期路径 | 查证后用短解释和例子回答 |
-| 根据练习和作品给具体反馈 | 沿关键词继续追问，必要时用图示 |
-| 保存进度、误区和下一步 | 只保留有续学价值的概念关系 |
+| 有明确目标，例如“独立写出 SQL 查询” | 了解目标和基础，拆分近期路径，用练习与作品持续校准 |
+| 只是好奇，例如“什么是 token？” | 直接给短解释和例子，沿你的追问继续展开，不强制启动课程 |
 
-![系统学习与问答探索：根据实际表现调整，精简记录以便下次继续](docs/learning-flow.svg)
+## ✨ 核心功能
 
-## 安装
+| | 能力 | 实际作用 |
+| --- | --- | --- |
+| 🎯 | **目标导向学习** | 把“我想学……”变成可完成、可检查的近期任务 |
+| 🔎 | **检索与查证** | 学习新主题前查找可靠资料，区分事实依据与教学方法 |
+| 🧩 | **渐进式讲解** | 每次推进一个小目标，用短解释、例子、图示或交互降低理解负担 |
+| 🧪 | **练习与反馈** | 根据你的回答或作品指出证据、误区和下一步修正 |
+| 🧠 | **ICAP 学习活动** | 从被动接收逐步走向主动生成、建构联系和互动推理 |
+| 📈 | **动态调整路径** | 按真实表现增减提示、改变难度或补齐前置知识 |
+| 💾 | **跨会话续学** | 保存目标、进度、误区和下一步，下次从原位置继续 |
+| 🔄 | **对话内更新** | 直接说“更新 rogue skill”，覆盖旧版本并保留学习档案 |
 
-需要 Node.js 与 npm，以及支持 Agent Skills、网络搜索和本地文件读写的 Agent。Skill 本身是 Markdown 规则，不包含模型或搜索服务。
+## 🗺️ 它如何工作
+
+```mermaid
+flowchart LR
+    A[提出问题或学习目标] --> B{当前需要什么?}
+    B -->|快速理解| C[短解释与例子]
+    B -->|系统学习| D[了解目标与基础]
+    C --> E[继续追问或尝试应用]
+    D --> F[检索资料并安排近期路径]
+    F --> G[讲解与练习]
+    E --> H[观察实际表现]
+    G --> H
+    H --> I[反馈并调整难度]
+    I --> J[保存必要进度]
+    J --> K[下一次继续]
+```
+
+![Rogue Learning Skill 的系统学习与问答探索流程](docs/learning-flow.svg)
+
+## 📦 安装
+
+### 安装到所有支持的 Agent
 
 ```bash
 npx -y skills add KairoRogue/rogue-learning -g --all
 ```
 
-只安装到 Codex：
+### 只安装到 Codex
 
 ```bash
 npx -y skills add KairoRogue/rogue-learning -g -a codex -y
 ```
 
-安装后打开新的 Agent 会话，输入：
+安装前需要准备：
+
+- Node.js 与 npm
+- 支持 Agent Skills 的 Codex 或其他 Agent
+- 若要使用检索与进度保存，还需允许 Agent 访问网络和本地文件
+
+安装器来自 [vercel-labs/skills](https://github.com/vercel-labs/skills)。安装完成后，请打开一个新的 Agent 会话，让新 Skill 被加载。
+
+## 🚀 怎么使用
+
+你不需要学习固定命令，直接说出想学什么即可。
+
+### 系统学习一个主题
 
 ```text
-使用 $rogue-learning，带我学习 SQL，目标是独立查询业务数据。
+使用 $rogue-learning，带我学习 SQL。
+我的目标是能够独立查询业务数据，每天可以学习 30 分钟。
 ```
 
-其他宿主的显式调用方式可能不同，也可以说“使用 rogue-learning”。安装器来自 [vercel-labs/skills](https://github.com/vercel-labs/skills)。
+### 快速理解一个概念
 
-### 更新
+```text
+什么是 token？请用一个简单例子解释，先不要展开太多。
+```
 
-已安装用户不需要先卸载。直接在 Codex 或其他支持 Skills 的 Agent 对话框里说：
+### 用图示帮助理解
+
+```text
+使用 $rogue-learning，用流程图解释循环什么时候继续、什么时候停止。
+```
+
+### 针对作品获得反馈
+
+```text
+使用 $rogue-learning，检查这篇给初学者看的文章。
+请根据结构、表达和可读性告诉我下一步先改什么。
+```
+
+### 继续上次学习
+
+```text
+使用 $rogue-learning，继续上次学习。
+```
+
+其他 Agent 的显式调用语法可能不同。无法使用 `$rogue-learning` 时，也可以直接说“使用 Rogue Learning Skill”。更多完整对话见 [使用教程](docs/getting-started.md) 和 [对话示例](examples/conversations.md)。
+
+## 🧠 学习方法
+
+Skill 会按任务选择合适的方法，不要求每次把所有方法走一遍。
+
+| 方法 | 在学习中的用法 |
+| --- | --- |
+| 主动回忆 | 先尝试回答，再查看解释 |
+| 间隔复习 | 隔一段时间重新检验，而不是把当天答对视为长期掌握 |
+| 样例学习 | 先看一个完整例子，再逐步独立完成 |
+| 渐退提示 | 掌握提高后减少提示，避免一直依赖模板 |
+| 自我解释 | 让学习者说清为什么这样做，暴露模糊理解 |
+| 迁移练习 | 换一个情境应用，判断是否真的会用 |
+| ICAP | 根据学习者的实际产出，在被动、主动、建构和互动参与之间调整活动 |
+
+这些研究支持的是具体学习机制，并不代表本 Skill 的整体效果已经经过实验验证。理论边界与来源见 [方法与证据](skills/rogue-learning/references/methods.md) 和 [ICAP 参与框架](skills/rogue-learning/references/icap.md)。
+
+## 💾 学习档案与隐私
+
+持续学习时，Agent 会把目标、必要的练习证据、误区和下一步保存在你自己的本地学习库中。默认入口位于用户文档目录的 `Codex/learning-records`，也可以由你指定其他位置。
+
+```text
+把我的学习档案保存在我指定的学习目录，以后从这里继续。
+```
+
+学习档案不会保存全部对话或整篇检索资料。跨会话恢复需要 Agent 能访问同一个目录；跨设备使用时，需要你自行同步该目录。模型服务如何处理对话和文件，取决于所使用的 Agent 与服务商。
+
+## 🔄 更新
+
+已经安装的用户无需先卸载。在 Codex 或其他支持 Skills 的 Agent 中直接说：
 
 ```text
 更新 rogue skill
 ```
 
-或：
-
-```text
-更新 rogue-learning skill
-```
-
-Agent 应重新运行安装命令覆盖规则资源，并保留独立学习库。手动执行时使用与安装相同的命令即可：
+也可以手动覆盖安装：
 
 ```bash
 npx -y skills add KairoRogue/rogue-learning -g --all
@@ -77,65 +167,49 @@ npx -y skills add KairoRogue/rogue-learning -g --all
 npx -y skills add KairoRogue/rogue-learning -g -a codex -y
 ```
 
-### 卸载
+更新只替换 Skill 的规则与资源，不删除独立存放的学习档案。
 
-移除全局安装的 Skill：
+## 🗑️ 卸载
+
+移除全局安装：
 
 ```bash
 npx skills remove rogue-learning -g
 ```
 
-仅从 Codex 移除：
+只从 Codex 移除：
 
 ```bash
 npx skills remove rogue-learning -g -a codex
 ```
 
-按提示确认移除范围。如果当初安装到项目内而没有使用 `-g`，在那个项目目录运行命令并去掉 `-g`。
+如果当初安装在某个项目中而没有使用 `-g`，请进入该项目目录运行命令，并去掉 `-g`。
 
-**卸载只移除 Skill，不删除学习档案。** 独立学习库中的目标、进度、练习、作品、资料来源和本地路径配置都会保留。重新安装后，只要仍可访问原学习库，就可以继续读取记录。若要彻底清除记录，请自行核对学习库路径，另行备份或删除；不要为了卸载 Skill 删除整个文档目录。详见 [更新与卸载](docs/getting-started.md#5-更新和卸载)。
+卸载只移除 Skill，不会自动删除学习档案。若要清除学习记录，请先确认实际保存位置并自行备份或删除，不要直接删除整个文档目录。详细说明见 [更新与卸载](docs/getting-started.md#5-更新和卸载)。
 
-## 你可以这样说
-
-```text
-我想学自媒体写作，先了解我的基础，再帮我安排学习。
-什么是 token？用简单例子解释，先别讲太多。
-用流程图解释循环什么时候继续、什么时候停止。
-这篇文章是给初学者看的，帮我分析结构和可读性。
-上次那道题跳过，我们继续。
-继续上次学习。
-```
-
-简单概念默认约 100～250 个中文字。图示、动画和小交互按理解需要选用；实际形式取决于宿主工具，无法交互时使用静态示意。
-
-## 它怎么判断你学到了什么
-
-SQL 看结果是否满足需求；文章看受众、结构、表达和具体修改取舍。开放成果不强制给一个“通过／不通过”。看过、跟着做过、独立完成和隔时仍会，会分别记录。
-
-学习方法按需使用：主动回忆、间隔复习、样例学习、逐步减少帮助、交错练习、自我解释和迁移练习。研究支持的是这些具体机制，不代表本 Skill 的整体效果已经经过实验验证。[查看方法与来源](skills/rogue-learning/references/methods.md)。
-
-## 进度存在你自己的学习库
-
-持续学习时，Agent 在本地保存目标、必要练习证据、误区和下一步。默认入口位于用户文档目录的 `Codex/learning-records`，也可以指定自己的目录。
+## 📂 仓库结构
 
 ```text
-把我的学习档案保存在我指定的学习目录，以后从这里继续。
+rogue-learning/
+├── skills/rogue-learning/       # 可安装的 Skill
+│   ├── SKILL.md                  # 核心规则与模式路由
+│   ├── agents/openai.yaml        # Agent 展示信息
+│   ├── references/               # 教学、检索、ICAP、档案和更新规则
+│   └── assets/                   # 学习档案模板
+├── docs/                         # 使用与验证文档
+├── examples/                     # 对话示例
+└── README.md
 ```
 
-记录不包含全部对话或整篇搜索资料。跨会话恢复需要访问同一个目录；跨设备请自行同步档案。模型服务如何处理对话与文件，取决于你使用的 Agent 和服务商。
+## 🧪 当前状态
 
-## 当前状态
+Rogue Learning Skill 目前是公开试用版本。仓库结构、本机入口以及 `npx skills add` 安装流程已经验证；完整多轮教学、跨会话恢复和长期学习效果仍需更多真实使用反馈。示例用于展示交互方式，不构成学习效果证明。
 
-首个公开试用版本。结构校验与本机全局入口检查已完成；完整多轮教学、跨会话恢复及长期学习效果尚未验证。仓库中的对话为教学示例，不是学习效果证明。安装验证记录见 [验证说明](docs/validation.md)。
+- [查看安装与结构验证](docs/validation.md)
+- [查看维护者验证环境](docs/maintainer-validation.md)
+- [提交问题或参与改进](CONTRIBUTING.md)
+- [查看版本记录](CHANGELOG.md)
 
-## 继续了解
-
-- [第一次学习、问答探索、保存与恢复](docs/getting-started.md)
-- [示例：SQL、概念解释与写作反馈](examples/conversations.md)
-- [反馈问题与参与改进](CONTRIBUTING.md)
-- [版本记录](CHANGELOG.md)
-- [维护者验证环境](docs/maintainer-validation.md)
-
-## 许可与致谢
+## 📄 许可
 
 本仓库原创内容采用 [MIT License](LICENSE)。引用资料的权利归原作者所有，链接不改变其许可。
