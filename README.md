@@ -134,8 +134,8 @@ SQL 看结果是否满足需求；文章看受众、结构、表达和具体修�
 - [示例：SQL、概念解释与写作反馈](examples/conversations.md)
 - [反馈问题与参与改进](CONTRIBUTING.md)
 - [版本记录](CHANGELOG.md)
+- [维护者验证环境](docs/maintainer-validation.md)
 
 ## 许可与致谢
 
 本仓库原创内容采用 [MIT License](LICENSE)。引用资料的权利归原作者所有，链接不改变其许可。
-
