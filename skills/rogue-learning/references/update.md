@@ -1,6 +1,6 @@
-# 更新 adaptive-learning
+# 更新 Rogue Learning Skill
 
-当用户要求“更新 adaptive-learning”、“更新 adaptivelearningskill”、“升级这个学习 Skill”或类似说法时，按更新处理，不要求用户先删除当前 Skill。
+当用户要求“更新 rogue skill”、“更新 rogue-learning skill”、“更新 Rogue Learning Skill”或类似说法时，按更新处理，不要求用户先删除当前 Skill。
 
 ## 原则
 
@@ -14,13 +14,13 @@
 全局更新所有支持宿主：
 
 ```bash
-npx -y skills add kairoRogue/adaptive-learning -g --all
+npx -y skills add KairoRogue/adaptive-learning -g --all
 ```
 
 只更新 Codex：
 
 ```bash
-npx -y skills add kairoRogue/adaptive-learning -g -a codex -y
+npx -y skills add KairoRogue/adaptive-learning -g -a codex -y
 ```
 
 项目内安装过的用户，应在原项目目录去掉 `-g` 后运行对应命令。
@@ -39,10 +39,10 @@ npx skills ls -g
 npx skills ls
 ```
 
-确认 `adaptive-learning` 仍存在。随后打开新 Agent 会话，直接说：
+确认 `rogue-learning` 仍存在。随后打开新 Agent 会话，直接说：
 
 ```text
-使用 adaptive-learning，继续上次学习。
+使用 rogue-learning，继续上次学习。
 ```
 
 如果没有自动找到学习记录，提供原学习库路径；不要删除 Skill 或学习库来排查。

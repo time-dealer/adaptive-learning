@@ -6,7 +6,7 @@
 
 为 AI Agent 准备的 Rogue Learning Skill：查证资料、简短解释、练习反馈，接着上次继续。
 
-[开始使用](#安装) · [使用教程](docs/getting-started.md) · [对话示例](examples/conversations.md) · [方法依据](skills/adaptive-learning/references/methods.md)
+[开始使用](#安装) · [使用教程](docs/getting-started.md) · [对话示例](examples/conversations.md) · [方法依据](skills/rogue-learning/references/methods.md)
 
 </div>
 
@@ -34,47 +34,47 @@ Rogue Learning Skill 会根据这两种情况调整教学方式。需要路线�
 需要 Node.js 与 npm，以及支持 Agent Skills、网络搜索和本地文件读写的 Agent。Skill 本身是 Markdown 规则，不包含模型或搜索服务。
 
 ```bash
-npx -y skills add kairoRogue/adaptive-learning -g --all
+npx -y skills add KairoRogue/adaptive-learning -g --all
 ```
 
 只安装到 Codex：
 
 ```bash
-npx -y skills add kairoRogue/adaptive-learning -g -a codex -y
+npx -y skills add KairoRogue/adaptive-learning -g -a codex -y
 ```
 
 安装后打开新的 Agent 会话，输入：
 
 ```text
-使用 $adaptive-learning，带我学习 SQL，目标是独立查询业务数据。
+使用 $rogue-learning，带我学习 SQL，目标是独立查询业务数据。
 ```
 
-其他宿主的显式调用方式可能不同，也可以说“使用 adaptive-learning”。安装器来自 [vercel-labs/skills](https://github.com/vercel-labs/skills)。
+其他宿主的显式调用方式可能不同，也可以说“使用 rogue-learning”。安装器来自 [vercel-labs/skills](https://github.com/vercel-labs/skills)。
 
 ### 更新
 
 已安装用户不需要先卸载。直接在 Codex 或其他支持 Skills 的 Agent 对话框里说：
 
 ```text
-更新 adaptive-learning skill
+更新 rogue skill
 ```
 
 或：
 
 ```text
-更新 adaptivelearningskill
+更新 rogue-learning skill
 ```
 
 Agent 应重新运行安装命令覆盖规则资源，并保留独立学习库。手动执行时使用与安装相同的命令即可：
 
 ```bash
-npx -y skills add kairoRogue/adaptive-learning -g --all
+npx -y skills add KairoRogue/adaptive-learning -g --all
 ```
 
 只更新 Codex：
 
 ```bash
-npx -y skills add kairoRogue/adaptive-learning -g -a codex -y
+npx -y skills add KairoRogue/adaptive-learning -g -a codex -y
 ```
 
 ### 卸载
@@ -82,13 +82,13 @@ npx -y skills add kairoRogue/adaptive-learning -g -a codex -y
 移除全局安装的 Skill：
 
 ```bash
-npx skills remove adaptive-learning -g
+npx skills remove rogue-learning -g
 ```
 
 仅从 Codex 移除：
 
 ```bash
-npx skills remove adaptive-learning -g -a codex
+npx skills remove rogue-learning -g -a codex
 ```
 
 按提示确认移除范围。如果当初安装到项目内而没有使用 `-g`，在那个项目目录运行命令并去掉 `-g`。
@@ -112,7 +112,7 @@ npx skills remove adaptive-learning -g -a codex
 
 SQL 看结果是否满足需求；文章看受众、结构、表达和具体修改取舍。开放成果不强制给一个“通过／不通过”。看过、跟着做过、独立完成和隔时仍会，会分别记录。
 
-学习方法按需使用：主动回忆、间隔复习、样例学习、逐步减少帮助、交错练习、自我解释和迁移练习。研究支持的是这些具体机制，不代表本 Skill 的整体效果已经经过实验验证。[查看方法与来源](skills/adaptive-learning/references/methods.md)。
+学习方法按需使用：主动回忆、间隔复习、样例学习、逐步减少帮助、交错练习、自我解释和迁移练习。研究支持的是这些具体机制，不代表本 Skill 的整体效果已经经过实验验证。[查看方法与来源](skills/rogue-learning/references/methods.md)。
 
 ## 进度存在你自己的学习库
 
