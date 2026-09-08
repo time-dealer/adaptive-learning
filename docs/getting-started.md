@@ -57,13 +57,13 @@ Agent 会利用已有信息，最多先问三个关键问题，再用小任务�
 Agent 应按本 Skill 的更新规则重新运行安装命令覆盖规则资源，并保留学习库。手动更新时，重新运行首页安装命令即可：
 
 ```bash
-npx -y skills add KairoRogue/adaptive-learning -g --all
+npx -y skills add KairoRogue/rogue-learning -g --all
 ```
 
 只更新 Codex：
 
 ```bash
-npx -y skills add KairoRogue/adaptive-learning -g -a codex -y
+npx -y skills add KairoRogue/rogue-learning -g -a codex -y
 ```
 
 如果曾手动修改 Skill 安装目录中的规则文件，更新可能覆盖这些改动；先自行备份或合并。学习库无需搬动。

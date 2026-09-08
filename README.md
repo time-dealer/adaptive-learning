@@ -34,13 +34,13 @@ Rogue Learning Skill 会根据这两种情况调整教学方式。需要路线�
 需要 Node.js 与 npm，以及支持 Agent Skills、网络搜索和本地文件读写的 Agent。Skill 本身是 Markdown 规则，不包含模型或搜索服务。
 
 ```bash
-npx -y skills add KairoRogue/adaptive-learning -g --all
+npx -y skills add KairoRogue/rogue-learning -g --all
 ```
 
 只安装到 Codex：
 
 ```bash
-npx -y skills add KairoRogue/adaptive-learning -g -a codex -y
+npx -y skills add KairoRogue/rogue-learning -g -a codex -y
 ```
 
 安装后打开新的 Agent 会话，输入：
@@ -68,13 +68,13 @@ npx -y skills add KairoRogue/adaptive-learning -g -a codex -y
 Agent 应重新运行安装命令覆盖规则资源，并保留独立学习库。手动执行时使用与安装相同的命令即可：
 
 ```bash
-npx -y skills add KairoRogue/adaptive-learning -g --all
+npx -y skills add KairoRogue/rogue-learning -g --all
 ```
 
 只更新 Codex：
 
 ```bash
-npx -y skills add KairoRogue/adaptive-learning -g -a codex -y
+npx -y skills add KairoRogue/rogue-learning -g -a codex -y
 ```
 
 ### 卸载

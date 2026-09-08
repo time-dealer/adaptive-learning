@@ -3,7 +3,7 @@
 ## Unreleased
 
 - 统一用户可见名称为 Rogue Learning Skill，稳定 Skill id 改为 `rogue-learning`。
-- 将公开安装与更新命令的 GitHub owner 更新为 `KairoRogue`。
+- 将公开安装与更新命令更新为 `KairoRogue/rogue-learning`。
 
 ## 0.1.0 — 首个公开试用版本
 
