@@ -9,10 +9,10 @@
     <path d="M194 165H239"/>
     <path d="M345 130L394 80"/>
     <path d="M345 200L394 250"/>
-    <path d="M585 80H634"/>
-    <path d="M585 250H634"/>
-    <path d="M825 80Q850 80 867 136"/>
-    <path d="M825 250Q850 250 867 194"/>
+    <path d="M585 80H624"/>
+    <path d="M585 250H624"/>
+    <path d="M835 80Q855 80 877 136"/>
+    <path d="M835 250Q855 250 877 194"/>
     <path d="M1025 165H1054"/>
   </g>
   <g stroke-width="1.5">
@@ -20,16 +20,16 @@
     <path d="M295 107L353 165L295 223L237 165Z" fill="white" stroke="#cbd5e1"/>
     <rect x="395" y="48" width="190" height="64" rx="12" fill="#eff6ff" stroke="#93c5fd"/>
     <rect x="395" y="218" width="190" height="64" rx="12" fill="#f0fdfa" stroke="#5eead4"/>
-    <rect x="635" y="48" width="190" height="64" rx="12" fill="#eff6ff" stroke="#93c5fd"/>
-    <rect x="635" y="218" width="190" height="64" rx="12" fill="#f0fdfa" stroke="#5eead4"/>
+    <rect x="625" y="48" width="210" height="64" rx="12" fill="#eff6ff" stroke="#93c5fd"/>
+    <rect x="625" y="218" width="210" height="64" rx="12" fill="#f0fdfa" stroke="#5eead4"/>
     <rect x="865" y="133" width="160" height="64" rx="12" fill="white" stroke="#cbd5e1"/>
     <rect x="1055" y="120" width="121" height="90" rx="12" fill="white" stroke="#cbd5e1"/>
   </g>
-  <g fill="#1e293b" font-family="system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" text-anchor="middle">
+  <g fill="#1e293b" font-family="system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" font-weight="500" text-anchor="middle">
     <text x="109" y="172">你的目标或问题</text>
     <text x="295" y="172">怎么开始</text>
-    <text x="490" y="75">系统学习</text><text x="490" y="98" font-size="15" fill="#475569">了解目标与起点</text>
-    <text x="490" y="245">问答探索</text><text x="490" y="268" font-size="15" fill="#475569">从当前问题开始</text>
+    <text x="490" y="75">系统学习</text><text x="490" y="99" font-size="18" font-weight="400" fill="#475569">了解目标与起点</text>
+    <text x="490" y="245">问答探索</text><text x="490" y="269" font-size="18" font-weight="400" fill="#475569">从当前问题开始</text>
     <text x="730" y="87">检索与教学</text>
     <text x="730" y="257">例子、图示或追问</text>
     <text x="945" y="160">根据实际表现</text><text x="945" y="183">调整</text>
