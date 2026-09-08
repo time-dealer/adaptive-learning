@@ -1,6 +1,6 @@
 # 维护者验证环境
 
-本仓库的 Skill 本体是 Markdown 规则文件，用户安装和使用 Roguelearning 不需要 Python 依赖；`rogue-learning` 是安装器和显式调用使用的稳定 Skill id。
+本仓库的 Skill 本体是 Markdown 规则文件，用户安装和使用 Rogue Learning 不需要 Python 依赖；`rogue-learning` 是安装器和显式调用使用的稳定 Skill id。
 
 维护者在修改 Skill 后，可运行 Codex `skill-creator` 自带的结构校验脚本：
 

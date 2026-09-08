@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- 统一用户可见名称为 Roguelearning，稳定 Skill id 为 `rogue-learning`。
+- 统一用户可见名称为 Rogue Learning，稳定 Skill id 为 `rogue-learning`。
 - 将公开安装与更新命令更新为 `KairoRogue/rogue-learning`。
 
 ## 0.1.0 — 首个公开试用版本
