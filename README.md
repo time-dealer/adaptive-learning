@@ -51,6 +51,32 @@ npx -y skills add time-dealer/adaptive-learning -g -a codex -y
 
 其他宿主的显式调用方式可能不同，也可以说“使用 adaptive-learning”。安装器来自 [vercel-labs/skills](https://github.com/vercel-labs/skills)。
 
+### 更新
+
+已安装用户不需要先卸载。直接在 Codex 或其他支持 Skills 的 Agent 对话框里说：
+
+```text
+更新 adaptive-learning skill
+```
+
+或：
+
+```text
+更新 adaptivelearningskill
+```
+
+Agent 应重新运行安装命令覆盖规则资源，并保留独立学习库。手动执行时使用与安装相同的命令即可：
+
+```bash
+npx -y skills add time-dealer/adaptive-learning -g --all
+```
+
+只更新 Codex：
+
+```bash
+npx -y skills add time-dealer/adaptive-learning -g -a codex -y
+```
+
 ### 卸载
 
 移除全局安装的 Skill：
@@ -112,5 +138,4 @@ SQL 看结果是否满足需求；文章看受众、结构、表达和具体修�
 ## 许可与致谢
 
 本仓库原创内容采用 [MIT License](LICENSE)。引用资料的权利归原作者所有，链接不改变其许可。
-
 

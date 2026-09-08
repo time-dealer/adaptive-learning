@@ -42,7 +42,31 @@ Agent 会利用已有信息，最多先问三个关键问题，再用小任务�
 
 ## 5. 更新和卸载
 
-更新前保留自行修改的 Skill 文件。可重新运行首页安装命令，按安装器提示处理已有安装；学习库无需搬动。
+更新时不要先卸载。直接在 Codex 或其他支持 Skills 的 Agent 对话框里说：
+
+```text
+更新 adaptive-learning skill
+```
+
+或：
+
+```text
+更新 adaptivelearningskill
+```
+
+Agent 应按本 Skill 的更新规则重新运行安装命令覆盖规则资源，并保留学习库。手动更新时，重新运行首页安装命令即可：
+
+```bash
+npx -y skills add time-dealer/adaptive-learning -g --all
+```
+
+只更新 Codex：
+
+```bash
+npx -y skills add time-dealer/adaptive-learning -g -a codex -y
+```
+
+如果曾手动修改 Skill 安装目录中的规则文件，更新可能覆盖这些改动；先自行备份或合并。学习库无需搬动。
 
 卸载可运行：
 
