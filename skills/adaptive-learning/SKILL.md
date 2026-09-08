@@ -25,6 +25,7 @@ description: 当用户希望系统学习、继续学习或通过连续提问了�
 续学或持续探索时读取 [档案规则](references/persistence.md)，检查固定学习库；单次问答不强制建档，也不先宣布课程进度。
 继续学习：读取档案中的当前目标、最近记录、到期复习；只在目标或约束变化时补问。
 教学、纠错、复习或阶段检验：读取 [教学与检验](references/teaching.md)。
+设计理解活动、改进摘要／复述练习或承接用户推理讨论：读取 [ICAP 参与框架](references/icap.md)，按实际产出调整活动，不强制走完四种模式。
 保存或恢复：读取 [档案规则](references/persistence.md)，使用 [档案模板](assets/learning-record.md)。
 解释方法依据或选择方法：读取 [方法与证据](references/methods.md)。
 不读取 evals；它是开发评测材料，不是教学内容。
