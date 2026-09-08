@@ -3,7 +3,7 @@
 ## Unreleased
 
 - 统一用户可见名称为 Rogue Learning Skill，保留 `adaptive-learning` 作为稳定 Skill id。
-- 将公开安装与更新命令的 GitHub owner 更新为 `RecodeSun`。
+- 将公开安装与更新命令的 GitHub owner 更新为 `kairoRogue`。
 
 ## 0.1.0 — 首个公开试用版本
 
